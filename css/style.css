@@ -31,7 +31,7 @@ main{
 }
 
 .sombra{
-    font-size: 400px;
+    font-size: 28vw;
     color: #ffffff55;
     z-index: -999;
     position: absolute;
@@ -42,7 +42,7 @@ main{
 
 h1{
     flex-grow: 1;
-    font-size: 300px;
+    font-size: 22vw;
     color: white;
     display: flex;
     justify-content: center;
@@ -81,8 +81,87 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 footer{
     text-align: center;
     color: var(--secondary-color);
+    }
+
+    /*Tablet*/
+    @media (max-width: 1024px) {
+        
+        body{
+            padding: 30px;
+        }
+       
+        main{
+        justify-content: space-between;
+       }
+        
+       .sombra{
+           transform: translate(-50%, -180%);
+        } 
+       
+        h1{
+            transform: translate(0%, -30%);
+        }
+        
+        .descricao p {
+            text-align: center;
+        }
+        
+        .pikachu{
+            transform: translate(-45%, -50%);
+            z-index: -1;
+        }
+        
+        footer{
+            display: none;
+        }  
+
+        .container{
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            padding: 0;
+            gap: 8px;
+        }
+
+        .container p{
+            font-size: 18px;
+        }
+    }
+
+    /*Mobile*/
+    @media (max-width: 480px){
+        
+        .descricao p{
+            display: none;
+        }
+        
+        .sombra {
+            transform: translate(-50%, -220%);
+        }
+
+        h1{
+            transform: translate(0%, -22%);
+        }
+
+        .container h2 {
+            font-size: 38px;
+        }
+
+        .container a {
+            width: 100%;
+        }
+
+        .pikachu {
+            height: 50vh;
+            
+        }
+
+        footer{
+            display: none;
+        }
     }
